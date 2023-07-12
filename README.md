@@ -31,7 +31,7 @@ In the [Installing](https://docs.conda.io/en/latest/miniconda.html#installing) s
 
 This creates a `miniconda3` folder in your home dir, and also asks to modify your shell configuration files to enable activation of the conda environment (you'll have to close and reopen your terminal shell).
 
-If conda is not activated automatically you can do that with
+If Conda is not activated automatically you can do that with
 
     conda activate
 
@@ -45,7 +45,7 @@ To exit the conda environment type
 
 Channels are repositories of packages. The `defaults` channel contains the large set of Anaconda packages and is sufficient for many uses. It is the channel configured by default.
 
-For scientific computing the `conda-forge` channel should be added:
+For an even wider choice and for scientific computing the `conda-forge` channel should be added:
 
     conda config --append channels conda-forge
 
