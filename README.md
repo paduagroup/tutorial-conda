@@ -1,2 +1,2 @@
 # tutorial-conda
-How to install a conda environment for the group's tools and codes
+How to install conda for the group's tools and codes
