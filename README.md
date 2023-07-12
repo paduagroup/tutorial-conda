@@ -21,7 +21,7 @@ You are ready to use (most of) the group's Python tools.
 
 ----
 
-## 1 Install a conda distribution
+## 1 Install a Conda distribution
 
 I recommend [Miniconda](https://docs.conda.io/en/latest/miniconda.html), which starts as a smaller installation. Packages are then installed as needed.
 
