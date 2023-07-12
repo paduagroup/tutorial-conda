@@ -12,7 +12,7 @@ I recommend [`Miniconda`](https://docs.conda.io/en/latest/miniconda.html), which
 
 In the [Installing](https://docs.conda.io/en/latest/miniconda.html#installing) section choose the archive corresponding to your platform. On Mac I use the bash archive and then in a terminal do:
 
-        bash Miniconda3-latest-MacOSX-x86_64.sh
+        bash Miniconda3-latest-XXX-XXX.sh
 
 This creates a `miniconda3` folder in your home dir, and also modifies your shell configuration files to enable activation of the conda environment (you'll have to close and reopen your shell terminal).
 
