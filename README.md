@@ -8,7 +8,7 @@ Conda is a package management system suitable for Python packages and also for m
 
 ## 0 For the impatient
 
-Download [Miniconda installer archive](https://docs.conda.io/en/latest/miniconda.html#installing)
+Download a [Miniconda installer archive](https://docs.conda.io/en/latest/miniconda.html#installing)
 
     bash Miniconda3-latest-XXX-XXX.sh
 
