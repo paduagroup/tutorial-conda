@@ -4,7 +4,7 @@ How to install Conda to use the group's tools and codes.
 
 ----
 
-Conda is a package management system suitable for Python packages and also for many scientific codes, not necessarily written in Python (for example, Packmol and Gnuplot are available as Conda packages). Conda manages dependencies, meaning it installs all that is required for a given software to run and tries to keep all those packages updated while ensuring compatibility of versions.
+Conda is a package management system suitable for Python packages and also for many scientific codes, not necessarily written in Python (for example, Packmol and Gnuplot are available as Conda packages). Conda manages dependencies, meaning it installs all that is required for a given software to run and tries to keep packages updated while ensuring compatibility of versions.
 
 ## 0 For the impatient
 
@@ -29,7 +29,7 @@ In the [Installing](https://docs.conda.io/en/latest/miniconda.html#installing) s
 
     bash Miniconda3-latest-XXX-XXX.sh
 
-This creates a `miniconda3` folder in your home dir, and also asks to modify your shell configuration files to enable activation of the conda environment (you'll have to close and reopen your terminal shell).
+This creates a folder named `miniconda3` in your home dir, and also asks to modify your shell configuration files to enable activation of the conda environment (you'll have to close and reopen your terminal shell).
 
 If Conda is not activated automatically you can do that with
 
@@ -39,13 +39,13 @@ To exit the conda environment type
 
     conda deactivate
 
-(If you have other Python installations in your computer outside Conda, for example with Homebrew or Pip, it is advisable to manage those installations while Conda is deactivated.)
+(If you have other Python installations in your computer outside Conda, for example with Homebrew or Pip, it is safer to manage those installations while Conda is deactivated.)
 
 ## 2 Channels
 
 Channels are repositories of packages. The `defaults` channel contains the large set of Anaconda packages and is sufficient for many uses. It is the channel configured by default.
 
-For an even wider choice and for scientific computing the `conda-forge` channel should be added:
+For an even wider choice and for scientific computing, you can add the `conda-forge` channel:
 
     conda config --append channels conda-forge
 
@@ -67,32 +67,30 @@ To search for packages (in the available channels):
 
     conda search lmfit
 
-You can see the packages already installed with
+You can list the packages already installed with
 
     conda list
 
-To keep packages up-to-date use the following command regularly:
+To keep packages up-to-date issue the following command regularly:
 
     conda upgrade --all
 
 
 ## 4 Environments
 
-Environments allow different groups of packages to exist in separate spaces. This is useful for large packages that have many dependencies, which easily give rise to conflicts between versions of certain packages.
+Environments allow different groups of packages to exist in separate spaces. This is useful for large packages that have many dependencies, which easily give rise to conflicts between versions of certain dependency packages.
 
 The default environment is called `base`. I recommend using the `base` environment for the essential Python packages such as `numpy`, `matplotlib`, `pandas` or `jupyter`. These, together with `lmfit` and maybe a few more tools, are enough to run the group's Python scripts.
 
-If you will *not* be using large computational codes, working only in the `base` environment should suffice and you can skip the rest of this section.
+If you will **not** be using large computational codes, working only in the `base` environment should suffice and you can skip the rest of this section.
 
 If you will be using large packages (OpenMM, Psi4) then I recommend creating a separate environment for each one. For example,
 
     conda create --name omm
 
-You can list your different environments with
+You can list your environments with
 
     conda env list
-
-Then install packages in your active environment as usual.
 
 To activate or deactivate the environment you want to work in:
 
@@ -102,9 +100,11 @@ To activate or deactivate the environment you want to work in:
 
 (you will be back in `base`).
 
+You can install packages in your active environment as usual.
+
 
 ## 5 Conda and Pip
 
 Conda and Pip are two different package management systems, and a certain discipline is required to avoid confusions. It is possible to install Pip inside a Conda environment and then packages from the PyPi repository. However, this is not an optimal setup and should be avoided if possible (Pip doesn't know about Conda dependencies). Instead, it is advisable to install packages from `conda-forge` and only resort to Pip packages as a last option.
 
-Pip can also reside outside Conda (this is common in a Linux system or in MacOS with Homebrew). In this case it is advisable to deactivate Conda before installing or updating Pip packages.
+Pip can also reside outside Conda (this is common in a Linux system or in MacOS with Homebrew). In this case it is safer to deactivate Conda before installing or updating Pip packages.
